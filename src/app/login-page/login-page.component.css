@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+.button, .form__block-button input, .form__block-login [type="button"] {
+  border: none;
+  background: #f2f2f2;
+  color: #4a4a4a;
+  line-height: 35px; }
+  .button:hover, .form__block-button input:hover, .form__block-login [type="button"]:hover, .button:active, .form__block-button input:active, .form__block-login [type="button"]:active {
+    border-bottom: 3px solid #91d763;
+    box-sizing: border-box;
+    height: 35px; }
+
+.header {
+  width: 100%;
+  height: 975px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #00b3be; }
+  @media screen and (max-width: 740px) {
+    .header {
+      flex-direction: column;
+      justify-content: start;
+      height: 100vh; } }
+  .header__block {
+    background-image: url("../../assets/login-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 0 50px;
+    width: calc(100% - 410px); }
+    @media screen and (max-width: 740px) {
+      .header__block {
+        background: white;
+        width: 100%;
+        padding: 10px 0 20px 50px;
+        justify-content: start; } }
+  .header__search {
+    margin-left: 10%;
+    margin-top: 20px;
+    border-bottom: 1px solid #00b3be;
+    width: 60%;
+    max-width: 450px; }
+    @media screen and (max-width: 740px) {
+      .header__search {
+        width: 50%;
+        margin-left: 10%; } }
+    .header__search input, .header__search input:focus {
+      background-color: transparent;
+      width: 90%;
+      outline: none;
+      border: none; }
+  .header__authorization {
+    max-width: 410px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (max-width: 740px) {
+      .header__authorization {
+        margin: auto;
+        margin-top: 20px; } }
+
+.authorization__welcome {
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px; }
+  .authorization__welcome a {
+    color: #4a4a4a;
+    text-decoration: none; }
+
+.authorization__form {
+  margin-top: 100px;
+  width: 100%; }
+
+.form__block-button {
+  display: flex;
+  justify-content: space-between; }
+  .form__block-button input {
+    width: 150px; }
+
+.form__block-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  margin-top: 60px; }
+  .form__block-login [type="email"], .form__block-login [type="password"] {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 3px solid white;
+    padding-left: 10px; }
+    .form__block-login [type="email"]::placeholder, .form__block-login [type="password"]::placeholder {
+      color: white;
+      font-family: Arial;
+      font-size: 14px; }
+
+/*# sourceMappingURL=login-page.component.css.map */

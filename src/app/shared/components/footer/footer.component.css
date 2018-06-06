@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0; }
+
+.footer {
+  width: 100%;
+  background-color: #00b3be;
+  color: white;
+  text-align: center; }
+  .footer p {
+    line-height: 50px; }
+
+/*# sourceMappingURL=footer.component.css.map */

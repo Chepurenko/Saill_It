@@ -1,0 +1,16 @@
+button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: mediumseagreen;
+  border: 0;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  &:hover {
+    background-color: peachpuff;
+  }
+  &:focus {
+    outline: none;
+  }
+}

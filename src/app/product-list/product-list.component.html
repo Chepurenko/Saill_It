@@ -1,0 +1,15 @@
+<app-header></app-header>
+<main>
+  <div class="main__wrap">
+    <div class="product" appInfiniteScroll
+         (infiniteScrollAction)="addItem()"
+         [goScroll]="isReadyToScroll">
+      <app-product-item *ngFor="let i of data"
+                        [id]="i.id"
+                        [theme]="i.theme"
+                        [image]="i.images[0]?.file"></app-product-item>
+    </div>
+    <button (click)="addItem()">add item</button>
+    <app-button-top></app-button-top>
+  </div>
+</main>

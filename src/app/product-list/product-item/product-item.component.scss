@@ -1,0 +1,29 @@
+$color: #00b3be;
+@import "../../../assets/fonts/font-awesome-4.7.0/scss/font-awesome.css";
+
+.product__item {
+  margin-bottom: 20px;
+  width: 320px;
+  height: 250px;
+  & img {
+    width: inherit;
+    height: 200px;
+  }
+}
+.item__more {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  line-height: 52px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: $color;
+  & a {
+    color: white;
+    height: 100%;
+    width: 50%;
+    padding-left: 125px;
+    box-sizing: border-box;
+  }
+}
