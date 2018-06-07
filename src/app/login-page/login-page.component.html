@@ -8,20 +8,17 @@
   </div>
   <div class="header__authorization">
     <div class="authorization__welcome">
-      Welcome, <a href="#">login</a> or <a href="#">register</a> for start!
+      Welcome, <span>login</span> or <span>register</span> for start!
     </div>
     <img src="../../assets/Logo_white.png" alt="logo">
-    <form class="authorization__form" action="#">
+    <div class="authorization__form" >
       <div class="form__block-button">
-        <input type="button" value="Sign In" name="sign in">
-        <input type="button" value="Sign Up" name="sign up">
+        <input type="button" value="Sign In" name="sign in" (click)="isGuest = false">
+        <input type="button" value="Sign Up" name="sign up" (click)="isGuest = true">
       </div>
-      <div class="form__block-login">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="button" value="Login" name="login">
-      </div>
-    </form>
+      <app-sign-in *ngIf="!isGuest"></app-sign-in>
+      <app-sign-up #isGuest *ngIf="isGuest"></app-sign-up>
+    </div>
   </div>
 </header>
 

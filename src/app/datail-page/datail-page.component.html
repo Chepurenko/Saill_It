@@ -3,16 +3,16 @@
   <div class="main__wrap">
     <section class="main__datail">
       <div class="datail__slider">
-        <img class="slider__item" src="../../assets/img_slide.jpg" height="500" width="500"/>
-        <img class="slider__item" src="../../assets/img_slide.jpg" height="500" width="500"/>
+        <img class="slider__item" src="{{dataOwner.images[0]?.file}}" />
+        <img class="slider__item" src="{{dataOwner.images[1]?.file}}" />
         <div class="slider__arrow">
           <img class="slick-next" src="../../assets/fa-long-arrow-right.png"/>
         </div>
       </div>
       <div class="datail__about">
-        <h1 class="about__title">Some title text must be here maybe second  line</h1>
-        <strong>from </strong><span class="about__name">Alis Kim </span><span class="about__cost">18000$</span>
-        <p class="about__description">Some description text from WYSIWYG editer</p>
+        <h1 class="about__title">{{dataOwner.theme}}</h1>
+        <strong>from </strong><span class="about__name">{{dataOwner.owner.first_name}} {{dataOwner.owner.last_name}}</span><span class="about__cost">{{dataOwner.price}}$</span>
+        <p class="about__description">{{dataOwner.text}}</p>
         <p >Can be <strong>BOLD</strong> Italic</p>
         <ul class="about__list">Can have list:
           <li>- first</li>
@@ -29,14 +29,14 @@
       <div class="chat__header">
         <span>Chat</span>
         <span> with </span>
-        <span>Alise Kim</span>
+        <span>{{dataOwner.owner.first_name}} {{dataOwner.owner.last_name}}</span>
         <div class="square"></div>
       </div>
       <div class="chat__wrap">
         <div class="chat__messenger">
           <div class="messenger__messages">
             <div class="messages__message messages__message_guest">
-              <div class="message-avatar"><img src="../../assets/alis_kim_28.jpg" height="28" width="28"/></div>
+              <div class="message-avatar"><img src="{{dataOwner.owner.avatar}}" height="28" width="28"/></div>
               <p>One line chat message </p>
             </div>
             <div class="messages__message messages__message_master">
@@ -53,9 +53,9 @@
           <p>Connected</p>
           <div class="connected__user-block">
             <div class="user-block__avatar">
-              <img src="../../assets/alis_kim_44.jpg" height="44" width="44"/>
+              <img src="{{dataOwner.owner.avatar}}" height="44" width="44"/>
             </div>
-            <div class="user-block__name">Alis Kim</div>
+            <div class="user-block__name">{{dataOwner.owner.first_name}} {{dataOwner.owner.last_name}}</div>
           </div>
           <div class="connected__user-block">
             <div class="user-block__avatar">

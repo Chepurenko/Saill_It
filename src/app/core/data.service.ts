@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {DataModel} from './data.model';
+import {DataModel, DataOwner} from './data.model';
 import {map, tap} from 'rxjs/operators';
 
 @Injectable({
@@ -37,5 +37,11 @@ export class DataService {
         response.results.forEach(item => results.push(new DataModel(item)));
         return results;
       }), tap(response => console.log(response)));
+  }
+  public readData(id: number): Observable<DataOwner> {
+    return this.http.get(`${this.urlAPI}${id}`)
+      .pipe(
+        map( (response: any) => new DataOwner(response) )
+      );
   }
 }

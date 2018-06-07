@@ -1,0 +1,40 @@
+$color: #00b3be;
+$colorSecond: #91d763;
+$colorLink:#4a4a4a;
+//---mixin---
+.button {
+  border: none;
+  background: #f2f2f2;
+  color: $colorLink;
+  line-height: 35px;
+  &:hover, &:active {
+    border-bottom: 3px solid $colorSecond;
+    box-sizing: border-box;
+    height: 35px;
+  }
+}
+
+.form__block-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  margin-top: 60px;
+  & [type="email"],
+  & [type="password"] {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 3px solid white;
+    padding-left: 10px;
+    &::placeholder {
+      color: white;
+      font-family: Arial;
+      font-size: 14px;
+    }
+  }
+  & [type="submit"] {
+    @extend .button;
+  }
+}
