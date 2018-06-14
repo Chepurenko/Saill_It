@@ -6,13 +6,25 @@
       <input class="search__input" type="search" name="search" placeholder="Try find something">
     </div>
   </div>
-  <div class="header__user-block" routerLink="/new">
-    <div class="user-block__wrap">
-      <div class="user-block__avatar">
-        <img src="../../../../assets/kim_evans_44.jpg" height="44" width="44"/>
+  <div class="header__user-block">
+    <div class="user-block__wrap" *ngIf="currentUser; else notAuth">
+      <div class="user-block__avatar" routerLink="/new">
+        <img src="{{currentUser.avatar}}" height="44" width="44"/>
       </div>
-      <div class="user-block__name">Kim Evans</div>
+      <div class="user-block__name">{{currentUser.username}}</div>
     </div>
-    <a href="#"><img src="../../../../assets/fa-sign-out.png" height="22" width="27"/></a>
+    <div>
+      <a routerLink="/user" href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+      <a (click)="logout()" routerLink="/login" href=""><img src="../../../../assets/fa-sign-out.png" height="22" width="27"/></a>
+    </div>
+    <ng-template #notAuth>
+      <p class="userMenu--notAuth">
+        Welcome,
+        <a href="" routerLink="/login">login</a>
+        or
+        <a href="" routerLink="/login">register</a>
+        for start
+      </p>
+    </ng-template>
   </div>
 </header>

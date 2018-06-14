@@ -1,0 +1,78 @@
+<app-header></app-header>
+<form [formGroup]="userChangeForm" (submit)="onSubmit()" class="form">
+  <div class="form-group">
+    <label class="form-label" for="userName">Name</label>
+    <input type="text" formControlName="username" id="userName" class="form-control">
+    <!--<div *ngIf="username.touched || username.dirty" class="form-validation-error">-->
+      <!--<span *ngIf="username.invalid">-->
+        <!--Required field.-->
+      <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="firstName">First Name</label>
+    <input type="text" formControlName="first_name" id="firstName" class="form-control">
+    <!--<div *ngIf="first_name.touched || first_name.dirty" class="form-validation-error">-->
+      <!--<span *ngIf="first_name.invalid">-->
+        <!--Required field.-->
+      <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="lastName">Last Name</label>
+    <input type="text" formControlName="last_name" id="lastName" class="form-control">
+    <!--<div *ngIf="last_name.touched || last_name.dirty" class="form-validation-error">-->
+    <!--<span *ngIf="last_name.invalid">-->
+    <!--Required field.-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="avatar">Avatar</label>
+    <input type="text" formControlName="avatar" id="avatar" class="form-control">
+    <!--<div *ngIf="avatar.touched || avatar.dirty" class="form-validation-error">-->
+    <!--<span *ngIf="avatar.invalid">-->
+    <!--Required field.-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="location">Location</label>
+    <input type="text" formControlName="location" id="location" class="form-control">
+    <!--<div *ngIf="location.touched || location.dirty" class="form-validation-error">-->
+    <!--<span *ngIf="location.invalid">-->
+    <!--Required field.-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="colorScheme">Color Scheme</label>
+    <input type="text" formControlName="color_scheme" id="colorScheme" class="form-control">
+    <!--<div *ngIf="color_scheme.touched || color_scheme.dirty" class="form-validation-error">-->
+    <!--<span *ngIf="color_scheme.invalid">-->
+    <!--Required field.-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="language">Language</label>
+      <select name="language" formControlName="language" id="language" class="form-control">
+        <option value="name">en</option>
+        <option value="name">ja</option>
+        <option value="name">fr</option>
+      </select>
+      <!--<div *ngIf="language.touched || language.dirty" class="form-validation-error">-->
+    <!--<span *ngIf="language.invalid">-->
+    <!--Required field.-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
+  <input type="submit" value="Submit" name="submit" (submit)="onSubmit()">
+</form>
+<app-footer></app-footer>

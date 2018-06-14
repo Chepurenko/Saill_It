@@ -1,3 +1,28 @@
+export class UserProfileModel {
+  /**
+   * User picture avatar
+   * for update - POST or PATCH jpg, jpeg, png or gif file in base64
+   * on GET - returns url string
+   * */
+  avatar: string | null;
+  /**
+   * User color scheme
+   * acceptable types:
+   * '#RRGGBB'
+   * 'rgb(rrr, ggg, bbb)'
+   * 'rgba(rrr, ggg, bbb, opacity)'
+   * 'hsl(hue, saturation, lightness)'
+   * 'hsla(hue, saturation, lightness, alpha)'
+   * */
+  color_scheme: string | null;
+  email: string;
+  first_name: string;
+  id: number;
+  language: string | null;
+  last_name: string;
+  location: {name: string} | null;
+  username: string;
+}
 export class User {
   id: number;
   username: string;

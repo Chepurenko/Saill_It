@@ -1,5 +1,6 @@
 $color: #00b3be;
 $colorSecond: #91d763;
+@import "../../../../assets/fonts/font-awesome-4.7.0/scss/font-awesome.css";
 //@font-face {
 //  font-family: 'MyriadPro';
 //  src: url('../../../../assets/fonts/MyriadPro-regular.woff') format('woff');
@@ -43,6 +44,11 @@ $colorSecond: #91d763;
       outline: none;
       border: none;
     }
+  }
+  .fa-user {
+    color: white;
+    font-size: 24px;
+    padding: 0 20px;
   }
   &__user-block {
     display: flex;

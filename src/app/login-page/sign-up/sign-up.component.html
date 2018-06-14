@@ -1,9 +1,34 @@
 <form class="form__block-login" action="#" [formGroup]="signUpForm" (submit)="submit()">
+  <input type="text" name="name" placeholder="Name" formControlName="userName">
   <input type="email" name="email" placeholder="Email" formControlName="userEmail">
+  <div class="input-error" *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)">
+    <div *ngIf="userEmail.errors['required']">
+      Email is required.
+    </div>
+    <div *ngIf="userEmail.errors['emailInvalid'] && userEmail.value.length > 0 && userEmail.touched">
+      Email is not correct.
+    </div>
+  </div>
   <input type="password" name="password" placeholder="Password" formControlName="userPassword">
+  <div class="input-error" *ngIf="userPassword.invalid && (userPassword.dirty || userPassword.touched)">
+    <div *ngIf="userPassword.errors['required']">
+      Password is required.
+    </div>
+    <div *ngIf="userPassword.errors['minlength'] && userPassword.touched">
+      Password is too short.
+    </div>
+    <div *ngIf="userPassword.errors['passwordInvalid'] && userPassword.touched">
+      Password must have numbers & letters.
+    </div>
+  </div>
   <input type="password" name="password" placeholder="Confirm Password" formControlName="confirmPassword">
-  <input type="submit" value="Login" name="login">
+  <div class="input-error" *ngIf="confirmPassword.dirty || confirmPassword.touched">
+    <div *ngIf="confirmPassword.touched && signUpForm.errors && confirmPassword.valid">
+      Passwords are different
+    </div>
+  </div>
+  <input type="submit" value="Login" name="login" [disabled]="signUpForm.status === 'INVALID'">
 </form>
 <pre>{{signUpForm.value | json}}</pre>
+<pre>{{userPassword.errors | json}}</pre>
 <pre>{{signUpForm.status | json}}</pre>
-<pre>{{signUpForm.get('confirmPassword')}}</pre>

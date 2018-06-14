@@ -19,8 +19,9 @@ $colorLink:#4a4a4a;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 150px;
+  height: 250px;
   margin-top: 60px;
+  & [type="text"],
   & [type="email"],
   & [type="password"] {
     background-color: transparent;
