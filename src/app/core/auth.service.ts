@@ -38,6 +38,14 @@ export class AuthService {
         })
       );
   }
+  public loginGoogle(user) {
+    return this.http.post('http://light-it-04.tk/api/rest-auth/google/', {access_token: user.token})
+      .pipe(
+        tap(response => {
+          console.log(response);
+        })
+      )
+  }
   get hasToken(): boolean {
     return this.sessionService.token !== undefined;
   }

@@ -32,7 +32,7 @@
 
   <div class="form-group">
     <label class="form-label" for="avatar">Avatar</label>
-    <input type="text" formControlName="avatar" id="avatar" class="form-control">
+    <input (change)="changAvatar($event)"  type="text" formControlName="avatar" id="avatar" class="form-control">
     <!--<div *ngIf="avatar.touched || avatar.dirty" class="form-validation-error">-->
     <!--<span *ngIf="avatar.invalid">-->
     <!--Required field.-->
@@ -52,7 +52,7 @@
 
   <div class="form-group">
     <label class="form-label" for="colorScheme">Color Scheme</label>
-    <input type="text" formControlName="color_scheme" id="colorScheme" class="form-control">
+    <input (change)="changeColor($event)"  type="text" formControlName="color_scheme" id="colorScheme" class="form-control">
     <!--<div *ngIf="color_scheme.touched || color_scheme.dirty" class="form-validation-error">-->
     <!--<span *ngIf="color_scheme.invalid">-->
     <!--Required field.-->

@@ -5,6 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {SessionService} from './session-service.service';
 import {UserProfileModel} from './user.model';
 import {catchError, distinctUntilChanged, share, tap} from 'rxjs/operators';
+import {UserInterface} from './user-interface.model';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class ProfileService {
       );
   }
 
-  public updateProfile(user: UserProfileModel) {
+  public updateProfile(user: UserInterface) {
     return this.http.patch(`http://light-it-04.tk/api/profile/`, {user})
       .pipe(
         tap((data: any) => {

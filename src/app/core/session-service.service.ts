@@ -20,9 +20,9 @@ export class SessionService {
     }
   }
 
-  get userProfile(): UserProfileModel {
-    return JSON.parse(localStorage.userProfile);
-  }
+  // get userProfile(): UserProfileModel {
+  //   return JSON.parse(localStorage.userProfile);
+  // }
 
   set userProfile(userData: UserProfileModel) {
     if (userData !== null) {
